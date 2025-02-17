@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <meta name="description" content="Get in touch with Splash White Water Rafting! 
+    Have questions or want to book a trip? 
+    Contact us today for more information and to start your adventure!">
+    <meta name="author" content="Lawson Mutsa">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <header>
+        <img class = "logo"  src="images/wwrlogo.png" alt="Company Logo">
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact Us</h1>
+        <hr>
+        <section class="company-info">
+            <h2>Our Office</h2>
+            <p>123 River Lane, Loves Park, USA</p>
+            <p>Phone: +1 (555) 123-4567</p>
+            <p>Email: contact@splashwhitewaterraftingcompany.com</p>
+            <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d94416.33451275778!2d-89.14854925738824!3d42.31031017119752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s123%20River%20Lane%20Adventure%20Town%20USA!5e0!3m2!1sen!2szw!4v1739104346710!5m2!1sen!2szw" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <hr>
+        <section class="employees">
+            <h3>Meet Our Team</h3>
+            <div class="employee">
+                <img src="images/employee1.jpg" alt="John Doe">
+                <p>John Doe - Tour Guide</p>
+            </div>
+            <div class="employee">
+                <img src="images/employee2.jpg" alt="Jane Smith">
+                <p>Jane Smith - Customer Support</p>
+            </div>
+            <div class="employee">
+                <img src="images/employee3.jpg" alt="Mike Johnson">
+                <p>Mike Johnson - Safety Officer</p>
+            </div>
+        </section>
+        <hr>
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <p>Purpose of Message:</p>
+                <label><input type="radio" id="general" name="purpose" value="general" required> General Inquiry</label>
+                <label><input type="radio" id="reservation" name="purpose" value="reservation"> Reservation Question</label>
+                <label><input type="radio" id="suggestion" name="purpose" value="suggestion"> Website Suggestion</label>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <label><input type="checkbox" name="subscribe" id="subscribe"> Please subscribe me to the monthly newsletter</label>
+                
+                <button type="submit">Send Message</button>
+            </form>
+            
+        </section>
+        
+    </main>
+
+    <footer>
+            <p>&copy; 2025, Splash White Water Rafting Company, Lawson Mutsa</p>
+            <nav class="sociallinks">
+                <a href="https://wa.me/+263716482027"><img src="images/whatsapp.png" alt="Whatsapp Logo"></a>
+                <a href="https://www.instagram.com"><img src="images/instagram.png" alt="Instagram Logo"></a>
+                <a href="https://www.facebook.com"><img src="images/Facebook.png" alt="Facebook Logo"></a>
+            </nav>
+    </footer>
+</body>
+</html>
