@@ -376,7 +376,7 @@ th {
 }
 /* Hero Section */
 .hero {
-    background-image: url('/images/rafting64_600.jpg'); 
+    background-image: url('images/rafting64_600.jpg'); 
     background-size: cover;
     background-position: center;
     height: 60vh;
