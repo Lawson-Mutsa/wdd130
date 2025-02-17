@@ -1,7 +1,6 @@
 /* Root Variables */
 :root {
     --primary-color: #4a8fe7;
-    --secondary-color: #5c7aff;
     --accent1-color: #59d2fe;
     --accent2-color: #44e5e7;
     --heading-font: 'Roboto', sans-serif;
@@ -10,20 +9,28 @@
 
 /* Global Styles */
 body {
-    font-family: var(--text-font);
-    background-color: var(--secondary-color);
+    font-family: 'Open Sans', sans-serif;
+    /*background-color: var(--secondary-color);*/
     margin: 0;
     padding: 0;
-    color: white;
+    color: black;
+    background-color: lightgrey;
+
 }
 
-/* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: var(--primary-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Image takes 1/3, nav takes 2/3 */
+    align-items: center; /* Center items vertically */
+    gap: 20px;
+    background-color:var(--primary-color);
+    font-family: var(--heading-font);
+}
+
+.logo {
+    padding-left: 100px;
+    width: 15%;
+    height: auto;
 }
 
 nav a {
@@ -33,23 +40,116 @@ nav a {
     font-weight: bold;
 }
 
-nav a:hover {
-    text-decoration: underline;
+h1 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 15px; /* Space below the heading */
 }
 
-/* Main Content */
-main {
-    padding: 20px;
+.rafting-article {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space between text and image */
+    padding: 20px; /* Padding around the article */
+    
 }
 
+.rafting-article p {
+    flex: 1; /* Allow the paragraph to take available space */
+    margin-right: 20px; /* Space between text and image */
+    line-height: 1.8;
+}
+
+.rafting-article img {
+    width: 300px; /* Fixed width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: add rounded corners */
+}
+.history {
+    text-align: center; /* Center the heading */
+    padding: 40px; /* Add padding around the section */
+}
+
+.history-content {
+    display: flex; /* Use Flexbox for layout */
+ /* Center items vertically */
+    justify-content: space-between; /* Space between text and image */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+.text-left p{
+    line-height: 1.8;
+
+}
+.text-right p{
+    line-height: 1.8;
+}
+
+.history img {
+    max-width: 300px; /* Adjust the image width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 20px; /* Add margin around the image */
+    border-radius: 8px;
+}
+
+.text-left,
+.text-right {
+    flex: 1; /* Allow the text divs to grow */
+    padding: 10px; /* Add some padding */
+    /* Optional: Add a background color or border for visual separation */
+}
+.adventure {
+    display: grid; /* Use CSS Grid */
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between images */
+    padding: 20px; /* Padding around the section */
+}
+
+.adventure h2 {
+    grid-column: 1 / -1;
+    font-size: 1.5rem; /* Smaller font size for the heading */
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.adventure img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: add rounded corners */
+}  
+footer {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space between paragraph and social links */
+    align-items: center; /* Center items vertically */
+    padding: 30px; /* Add padding for spacing */
+    text-align: center; /* Center the text */
+    background-color: var(--primary-color);
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+    font-family: var(--heading-font);
+
+}
+
+footer p {
+    flex: 1; /* Allow the paragraph to take available space */
+    margin: 0; /* Remove default margin */
+}
+
+.sociallinks {
+    display: flex; /* Use Flexbox for social links */
+ /* Space between icons */
+}
+.sociallinks img{
+    width: 34px;
+    height: 34px;
+}
 /* Company Info Section */
 .company-info {
-    background: white;
+    background: lightgray;
     color: black;
     padding: 20px;
-    border-radius: 10px;
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+hr{
+    height: 3px;
 }
 
 .map-container iframe {
@@ -59,33 +159,18 @@ main {
     margin-top: 15px;
 }
 
-/* Team Section */
-.team {
-    text-align: center;
-    margin-top: 40px;
-    width: 100%; /* Ensures full width */
-}
-
-.team h2 {
-    font-family: var(--heading-font);
-    font-size: 2rem;
-    color: white;
-    text-align: center;
-    display: block; /* Ensures it takes up full width */
-    width: 100%; /* Forces it to stay above images */
-    margin-bottom: 20px; /* Creates proper spacing above images */
-}
-
 .employees {
-    display: flex;
-    justify-content: center;
-    gap: 40px; /* Space between employee images */
-    flex-wrap: wrap;
+    text-align: center; /* Center the heading and employee text */
     margin-top: 20px;
 }
 
+.employees h3 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
 .employee {
-    text-align: center;
+    display: inline-block; /* Allows for row layout */
+    margin: 0 20px; /* Space between employee blocks */
 }
 
 .employee img {
@@ -100,7 +185,6 @@ main {
     font-weight: bold;
     margin-top: 10px;
 }
-
 /* Contact Form */
 .contact-form {
     background: white;
@@ -181,7 +265,7 @@ main {
     padding: 12px;
     font-size: 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: px;
     cursor: pointer;
     display: block;
     width: 100%;
@@ -190,40 +274,217 @@ main {
 }
 
 .contact-form button:hover {
-    background: var(--accent1-color);
+    color: var(--primary-color);
+    background: white;
+}
+.call-to-action {
+    background: lightgray;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.call-to-action h2{
+    font-size: 30px;
+    margin: 0;
+}
+.call-to-action p{
+    font-size: 26px;
+}
+.btn{
+    background: var(--primary-color);
+    text-decoration: none;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 21px;
+    border: none;
+    border-radius: px;
+    cursor: pointer;
+    display: block;
+    width: 20%;
+    margin-top: 15px;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
 }
 
-/* Footer */
-footer {
+.btn:hover {
+    color: var(--primary-color);
+    background: white;
+}
+
+/* Trip Descriptions */
+.trip-descriptions {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    gap: 20px; /* Space between grid items */
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.trip-descriptions h2{
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.trip {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+.trip p{
+    line-height: 2;
+}
+
+.trip img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Trips Table */
+.trips-table {
+    margin-top: 60px;
+    margin-bottom: 70px;
+}
+.trips-table h2{
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 4px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: var(--primary-color);
+    color: white;
+}
+/* Hero Section */
+.hero {
+    background-image: url('/images/rafting64_600.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Newsletter Signup */
+.newsletter {
     text-align: center;
     padding: 20px;
+}
+
+.newsletter h2 {
+    margin-bottom: 15px;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter input {
+    padding: 10px;
+    margin: 5px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.newsletter button {
     background-color: var(--primary-color);
     color: white;
+    width: 25%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-footer a {
+
+/* Grid Layout for Offerings */
+.offerings {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.offerings h2 {
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 130px;
+}
+
+.grid-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.grid-item p{
+    line-height: 1.5;
+}
+
+.grid-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Buttons */
+.btn1 {
+    display: inline-block;
+    background-color: var(--primary-color);
     color: white;
-    text-decoration: underline;
-}
-
-footer a:hover {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
     text-decoration: none;
-}
-
-/* Social Media Icons */
-.sociallinks {
+    border-radius: 10px;
+    transition: background-color 0.3s;
     margin-top: 10px;
 }
 
-.sociallinks a {
-    margin: 0 10px;
+.btn1:hover {
+    background-color: white;
+    color: var(--primary-color);
 }
 
-.sociallinks img {
-    width: 24px;
-    height: 24px;
-}
-
-.sociallinks a:hover {
-    opacity: 0.7;
-}
