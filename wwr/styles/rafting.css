@@ -46,10 +46,18 @@ h1 {
 }
 
 .rafting-article {
+    margin: 20px; /* Space around the article */
+}
+
+.rafting-article h1 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.content-container {
     display: flex; /* Use Flexbox for layout */
     justify-content: space-between; /* Space between text and image */
-    padding: 20px; /* Padding around the article */
-    
+    align-items: flex-start; /* Align items to the start */
 }
 
 .rafting-article p {
